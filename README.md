@@ -1,6 +1,7 @@
 # Azure Hub-Spoke with OpenTofu
 
 > **Azure base network architecture solution**
+> 
 > I wrote a blog regarding this solution that can be read here: https://www.buchatech.com/2026/01/azure-hub-and-spoke-architecture-explained-and-automated-with-opentofu. 
 
 This repository contains a production-ready, modular OpenTofu configuration that deploys Azure hub-spoke network topology with **two deployment modes (private or public)** to match your requirements and budget.
@@ -1944,4 +1945,5 @@ tofu destroy
 **Built by S.Buchanan ([www.buchatech.com](https://www.buchatech.com) )**
 
 For questions or feedback, open an issue in this repository.
+
 
