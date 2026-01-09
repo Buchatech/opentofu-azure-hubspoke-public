@@ -907,6 +907,9 @@ $rootCertBase64 = [Convert]::ToBase64String($cert.RawData)
 Write-Output $rootCertBase64 | Out-File -FilePath "$env:USERPROFILE\Desktop\AzureVPNRootCert.txt"
 ```
 
+<img width="1060" height="800" alt="image" src="https://github.com/user-attachments/assets/3b2e81d7-52d9-4b4b-943b-d5bb92d6cdfd" />
+
+
 On macOS/Linux:
 
 ```bash
@@ -957,6 +960,9 @@ cat azure-vpn-root-base64.txt
 3. **Windows**: Run `WindowsAmd64/VpnClientSetupAmd64.exe`
 4. **macOS**: Import `Generic/VpnServerRoot.cer` and client cert into Keychain, configure VPN in System Preferences
 5. **Linux**: Use the `Generic/VpnSettings.xml` with NetworkManager or strongSwan
+
+<img width="1060" height="758" alt="image" src="https://github.com/user-attachments/assets/5d2c5c30-900c-44db-af4b-22722a89a072" />
+
 
 **Step 4: Connect to Azure VPN**
 
@@ -1219,6 +1225,9 @@ Go to your GitHub repository:
 | `TFSTATE_RESOURCE_GROUP` | `rg-tfstate-{prefix}` | State storage resource group (e.g., `rg-tfstate-lab` or `rg-tfstate-myproject`) |
 | `TFSTATE_CONTAINER` | `tfstate` | State storage container name |
 
+<img width="556" height="418" alt="image" src="https://github.com/user-attachments/assets/0dafa70f-4c9f-42cf-af59-28045e15bf3f" />
+
+
 > **Note**: The last three secrets are for remote state management. GitHub Actions needs these to access the Azure Storage Account where your OpenTofu state is stored. The resource group and storage account names will include your custom prefix if you specified one during bootstrap.
 
 ### Step 3: Push Code to GitHub
@@ -1415,6 +1424,23 @@ git push -u origin feature/update-firewall-rules
    - **Plan job** (on PR): Shows `tofu plan` output
    - **Apply job** (on push to main): Shows `tofu apply` output
 4. Check for errors or warnings in the logs
+
+=======
+
+# Examples: 
+
+Shows the steps in the **Apply job**.
+
+<img width="347" height="258" alt="image" src="https://github.com/user-attachments/assets/095553af-ec91-4608-8dc3-b0cee5a8d25a" />
+
+Shows the **tofu apply** step running.
+
+<img width="1126" height="811" alt="image" src="https://github.com/user-attachments/assets/9f3fe1c1-a9cf-43f7-a54d-75e7638174d3" />
+
+Shows the **tofu output** step to get info for your deployed resources.
+
+<img width="1275" height="752" alt="image" src="https://github.com/user-attachments/assets/be5ad2be-444d-432c-a023-fd60ce44ce77" />
+
 
 ### Workflow Features
 
@@ -1954,6 +1980,7 @@ tofu destroy
 **Built by S.Buchanan ([www.buchatech.com](https://www.buchatech.com) )**
 
 For questions or feedback, open an issue in this repository.
+
 
 
 
