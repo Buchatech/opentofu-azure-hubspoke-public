@@ -358,19 +358,28 @@ The `bootstrap.sh` script scaffolds the entire project structure and sets up Azu
 bash ./bootstrap.sh
 ```
 When prompted, you'll be asked to:
-1. **Choose deployment mode**: Enter `BASIC` or `FULL` (or press Enter for FULL)
-2. **Enter a custom prefix**: Enter a unique prefix (3-15 lowercase alphanumeric characters) or press Enter for default `lab`
+1. **Choose deployment mode:**
+Select deployment configuration:
+
+  1) FULL    - Private endpoints, DNS Resolver, S2S VPN, Jumpbox"
+  2) BASIC   - Public access, no DNS/VPN/Jumpbox (simplified)"
+
+2. **Enter a custom prefix**: Enter a unique prefix/name for this deployment.`
 
 Example interaction:
 ```
-Enter deployment type [BASIC/FULL, default: FULL]: FULL
+Enter selection (1 or 2) [default: 1]: 2
 Enter prefix [default: lab]: myproject
 ```
+<img width="848" height="821" alt="image" src="https://github.com/user-attachments/assets/2ac685dd-926a-41c5-93ea-a129974aecdc" />
 
 This will create resources with your custom prefix:
 - **Repository folder**: `myproject-azure-lab-opentofu/`
 - **Storage Account**: `tfstatemyproject123456` (prefix + timestamp)
 - **Resource Group**: `rg-tfstate-myproject`
+
+<img width="809" height="1069" alt="image" src="https://github.com/user-attachments/assets/47530670-2876-4e6f-bcf3-da25145e91bb" />
+
 
 > 💡 **Tip**: A companion file `bootstrap-steps.sh` is provided as a step-by-step walkthrough guide. This helper file contains detailed instructions, examples, and troubleshooting tips for running the bootstrap script and working with the infrastructure. Reference it if you need additional context or guidance during deployment.
 
@@ -1945,6 +1954,7 @@ tofu destroy
 **Built by S.Buchanan ([www.buchatech.com](https://www.buchatech.com) )**
 
 For questions or feedback, open an issue in this repository.
+
 
 
 
