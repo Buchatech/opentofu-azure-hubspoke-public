@@ -1425,9 +1425,7 @@ git push -u origin feature/update-firewall-rules
    - **Apply job** (on push to main): Shows `tofu apply` output
 4. Check for errors or warnings in the logs
 
-=======
-
-# Examples: 
+💡 **Workflow Step Log Examples:**
 
 Shows the steps in the **Apply job**.
 
@@ -1980,6 +1978,7 @@ tofu destroy
 **Built by S.Buchanan ([www.buchatech.com](https://www.buchatech.com) )**
 
 For questions or feedback, open an issue in this repository.
+
 
 
 
